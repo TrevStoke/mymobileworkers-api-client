@@ -16,7 +16,7 @@ A modern, object-oriented PHP client for the [MyMobileWorkers API](https://docs.
 
 ## Requirements
 
-- PHP >= 7.4 or PHP 8.x (including PHP 8.1, 8.2, 8.3, 8.4, 8.5)
+- PHP >= 8.0 (including PHP 8.1, 8.2, 8.3, 8.4, 8.5)
 - `ext-curl`
 - `ext-json`
 
