@@ -7,11 +7,14 @@ namespace MyMobileWorkers\Tests\Endpoints;
 use MyMobileWorkers\Client;
 use MyMobileWorkers\Exceptions\ApiException;
 use MyMobileWorkers\Exceptions\AuthenticationException;
+use MyMobileWorkers\Exceptions\InvalidArgumentException;
+use MyMobileWorkers\Exceptions\MyMobileWorkersException;
 use MyMobileWorkers\Exceptions\NetworkException;
 use MyMobileWorkers\Exceptions\NotFoundException;
 use MyMobileWorkers\Exceptions\ValidationException;
 use MyMobileWorkers\Tests\Mock\MockHttpClient;
 use PHPUnit\Framework\TestCase;
+use Throwable;
 
 class ExceptionHandlingTest extends TestCase
 {
@@ -100,6 +103,24 @@ class ExceptionHandlingTest extends TestCase
         } catch (NetworkException $e) {
             $this->assertSame(28, $e->getCurlErrorCode());
             $this->assertStringContainsString('Operation timeout', $e->getMessage());
+        }
+    }
+
+    public function testExceptionHierarchyAndInterfaceImplementation(): void
+    {
+        $exceptions = [
+            new ApiException('API error', 500),
+            new AuthenticationException('Auth error', 401),
+            new NotFoundException('Not found', 404),
+            new ValidationException('Validation error', 400),
+            new NetworkException('Network error', 28),
+            new InvalidArgumentException('Invalid argument'),
+        ];
+
+        foreach ($exceptions as $e) {
+            $this->assertInstanceOf(MyMobileWorkersException::class, $e);
+            $this->assertInstanceOf(Throwable::class, $e);
+            $this->assertIsString((string) $e);
         }
     }
 }

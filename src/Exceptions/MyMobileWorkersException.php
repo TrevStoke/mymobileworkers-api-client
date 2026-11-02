@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace MyMobileWorkers\Exceptions;
 
-use Throwable;
-
-interface MyMobileWorkersException extends Throwable
+interface MyMobileWorkersException
 {
 }
