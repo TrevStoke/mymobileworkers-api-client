@@ -6,10 +6,10 @@ namespace MyMobileWorkers;
 
 class Config
 {
-    public const DEFAULT_BASE_URL = 'https://api.mymobileworkers.com:8181/api/1';
+    public const DEFAULT_BASE_URL = 'https://api20.mymobileworkers.com/api/1';
     public const DEFAULT_TIMEOUT = 30;
     public const DEFAULT_CONNECT_TIMEOUT = 10;
-    public const DEFAULT_USER_AGENT = 'MyMobileWorkers-PHP-Client/1.0';
+    public const DEFAULT_USER_AGENT = 'MyMobileWorkers-PHP-Client/1.0.1';
 
     protected string $apiKey;
     protected string $baseUrl;
