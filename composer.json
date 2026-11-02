@@ -1,5 +1,5 @@
 {
-  "name": "mymobileworkers/api-client",
+  "name": "trevweb/mymobileworkers-api-client",
   "description": "PHP HTTP API client for the MyMobileWorkers API",
   "keywords": ["mymobileworkers", "api", "client", "workforce", "http", "curl"],
   "type": "library",

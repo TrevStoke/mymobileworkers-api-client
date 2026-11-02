@@ -27,7 +27,7 @@ A modern, object-oriented PHP client for the [MyMobileWorkers API](https://docs.
 Install the package via [Composer](https://getcomposer.org/):
 
 ```bash
-composer require mymobileworkers/api-client
+composer require trevweb/mymobileworkers-api-client
 ```
 
 ---
