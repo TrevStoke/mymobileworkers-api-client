@@ -1,0 +1,37 @@
+{
+  "name": "mymobileworkers/api-client",
+  "description": "PHP HTTP API client for the MyMobileWorkers API",
+  "keywords": ["mymobileworkers", "api", "client", "workforce", "http", "curl"],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Trevor",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.4 || ^8.0",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5 || ^10.0 || ^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MyMobileWorkers\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MyMobileWorkers\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
