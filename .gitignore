@@ -1,0 +1,10 @@
+/vendor/
+/composer.lock
+.phpunit.result.cache
+.DS_Store
+
+# PhpStorm / JetBrains
+.idea/
+*.iml
+*.iws
+*.ipr
